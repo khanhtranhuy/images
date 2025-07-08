@@ -13,6 +13,8 @@ RUN apk add ansible-core
 
 RUN apk add ansible-lint 
 
+# Fix workflow error
+
 # RUN apk add locales 
 
 # RUN apk add sudo sshpass sudo
