@@ -38,7 +38,7 @@ jobs:
         run: |
           pwd
           ls
-          docker build . --file /docker/Dockerfile --tag ${{ github.repository }}/ansible
+          docker build . --file ./docker/Dockerfile --tag ${{ github.repository }}/ansible
           
         # uses: docker/build-push-action@v5
         # with:
