@@ -1,4 +1,4 @@
-name: Docker Build
+name: Build Ansible
 # Fix the worflow error
 on:
   workflow_dispatch:
