@@ -1,1 +1,1 @@
-FROM bitnami/kubectl:v1.29.11
+FROM bitnami/kubectl:1.29.11
