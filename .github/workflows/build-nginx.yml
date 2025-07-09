@@ -2,12 +2,12 @@ name: Build Nginx
 # Fix the worflow error
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'docker/**'
-  pull_request:
-    paths:
-      - 'docker/**'
+  # push:
+  #   paths:
+  #     - 'docker/**'
+  # pull_request:
+  #   paths:
+  #     - 'docker/**'
 
 env:
   REGISTRY: ghcr.io
