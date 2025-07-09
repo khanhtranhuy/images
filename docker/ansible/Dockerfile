@@ -11,22 +11,16 @@ RUN chsh -s /bin/bash
 
 RUN apk add ansible-core
 
-RUN apk add ansible-lint 
+RUN apk add ansible-lint
 
-# COPY ./ansible.cfg ~/ansbile.cfg
+RUN apk add sudo sshpass
 
-# Fix workflow error
+RUN adduser -D -h /home/ansible -s /bin/bash ansible
 
-# RUN apk add locales
+USER ansible
 
-# RUN apk add sudo sshpass sudo
+WORKDIR /home/ansible
 
-# RUN adduser --quiet --disabled-password --ingroup sudo --comment "No comment" --shell /bin/bash ansible
-
-# RUN echo 'ansible ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
-
-# USER ansible
-
-# WORKDIR /home/ansible
+ENTRYPOINT python
 
 # RUN echo "export PATH=~/.local/bin/:$PATH" >> ~/.bashrc
