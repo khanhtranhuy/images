@@ -13,9 +13,11 @@ RUN apk add ansible-core
 
 RUN apk add ansible-lint 
 
+# COPY ./ansible.cfg ~/ansbile.cfg
+
 # Fix workflow error
 
-# RUN apk add locales 
+# RUN apk add locales
 
 # RUN apk add sudo sshpass sudo
 
