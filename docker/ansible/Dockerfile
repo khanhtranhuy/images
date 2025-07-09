@@ -21,6 +21,6 @@ USER ansible
 
 WORKDIR /home/ansible
 
-ENTRYPOINT python
+ENTRYPOINT ["python"]
 
 # RUN echo "export PATH=~/.local/bin/:$PATH" >> ~/.bashrc
