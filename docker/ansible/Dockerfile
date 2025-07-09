@@ -1,4 +1,7 @@
 ARG PYTHON_VERSION=3.14-rc-alpine
+
+ARG KUBECTL_VERSION=v1.29.15
+
 FROM python:${PYTHON_VERSION} AS base
 
 RUN apk update
@@ -21,7 +24,7 @@ RUN apk add openssh
 
 RUN apk add curl
 
-RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/${version}/bin/linux/amd64/kubectl
+RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl
 
 RUN chmod +x ./kubectl
 
