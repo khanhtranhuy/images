@@ -17,7 +17,7 @@ RUN apk add sudo
 
 RUN apk add sshpass
 
-RUN apk add ssh
+RUN apk add openssh
 
 RUN adduser -D -h /home/ansible -s /bin/bash ansible
 
