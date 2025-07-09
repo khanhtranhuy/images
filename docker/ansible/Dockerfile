@@ -13,7 +13,7 @@ RUN apk add ansible-core
 
 RUN apk add ansible-lint
 
-RUN apk add sudo sshpass
+RUN apk add sudo sshpass ssh
 
 RUN adduser -D -h /home/ansible -s /bin/bash ansible
 
