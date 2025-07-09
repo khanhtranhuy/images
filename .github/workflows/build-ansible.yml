@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'docker/**'
+      - 'docker/ansible/**'
   pull_request:
     paths:
-      - 'docker/**'
+      - 'docker/ansible/**'
 
 env:
   REGISTRY: ghcr.io

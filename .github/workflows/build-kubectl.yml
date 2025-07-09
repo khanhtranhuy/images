@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'docker/**'
+      - 'docker/kubectl/**'
   pull_request:
     paths:
-      - 'docker/**'
+      - 'docker/kubectl/**'
 
 env:
   REGISTRY: ghcr.io
@@ -30,7 +30,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          file: ./docker/nginx/Dockerfile
+          file: ./docker/kubectl/Dockerfile
           push: true
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
           cache-from: type=registry,ref=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:buildcache
